@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>00000</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<link rel="shortcut icon" href="images/favicon.png" type="image/png">
+</head>
+
+<body>
+    
+    <style>
+        *{
+            border:1px solid red;
+        }
+        h1{
+            font-size: 24px;
+        }
+        .section,
+        .row,
+        .col{
+            border-style: solid;
+            border-width: 0px;
+        }
+        .section{
+            border-color: green;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            flex-direction: column;
+        }
+        .row{
+            border-color: red;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+        }
+        .col{
+            border-color: gold;
+            flex: 1;
+        }
+        .col1{
+            flex: 1;
+        }
+        .col2{
+            flex: 2;
+        }
+        .col3{
+            flex: 3;
+        }
+        .col4{
+            flex: 4;
+        }
+        .col5{
+            flex: 5;
+        }
+        .col6{
+            flex: 6;
+        }
+        .col7{
+            flex: 7;
+        }
+        .col8{
+            flex: 8;
+        }
+        .col9{
+            flex: 9;
+        }
+        .col10{
+            flex: 10;
+        }
+        .col11{
+            flex: 11;
+        }
+        .col12{
+            flex: 12;
+        }
+        .df-row{
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+        }
+        .df-col{
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            flex-direction: column;
+        }
+        .section1,
+        .section2,
+        .section3{
+            display: none; 
+        }
+
+        
+        .section_header{
+            background-image: url('../1images/top-1920.png');
+            background-repeat: no-repeat;
+            padding-top: 230px;
+            padding-top: 0px;
+            background-size: 100% 218px;
+            -moz-background-size: 100% 218px;
+        }
+        
+
+        
+
+        
+        
+        .header-col10{
+            flex: 10;
+        }
+        .header-col2{
+            flex: 2;
+        }
+        /*главное меню в header, меню авторизации в header*/
+        ul.header-top-nav, ul.header-top-autoriz{
+            list-style-type: none;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+        }
+        ul.header-top-nav{
+            flex-wrap: wrap;
+/*            overflow-x: scroll;*/
+            flex: 1;
+        }
+        ul.header-top-autoriz{
+            justify-content: flex-start; 
+            flex-wrap: wrap;
+            flex: 10;
+        }
+        ul.header-top-nav li{
+            flex: 1 10 auto;
+        }
+        ul.header-top-nav li:last-child{
+            flex: 17 2 auto;
+        }
+        ul.header-top-nav li a{
+            color: #777;
+            text-decoration: none; 
+            white-space: nowrap;
+            padding: 10px;
+            font-size: 16px;
+        }
+        ul.header-top-nav li a:hover,
+        ul.header-top-autoriz li a:hover{
+            color: #3dbfe0;
+        }
+        ul.header-top-autoriz li a{
+            color: #777;
+            text-decoration: none; 
+            border-bottom-style: dashed;
+            border-bottom-width: 1px; 
+            margin: 2px 10px; 
+            font-size: 16px;
+        }
+        
+        .col-logo-left{
+            flex: 1;
+        }
+        .col-logo-right{
+            flex: 11;
+        }
+        
+        #logo{
+            margin: 10px 24px;
+            
+        }
+
+        #logo img{
+            width: 13vw;
+        }
+        #logo2{
+            width: 12vw;
+        }
+        #row1024-1{
+            display: flex;
+        }
+        #row1024-2{
+            display: none;
+        }
+        
+            
+        
+/*----------------------1600------------------------*/ 
+        @media screen and (max-width: 1600px){
+            .section_header{
+            background-image: url('../images/top-1600.png');
+            background-repeat: no-repeat;
+            background-size: 100% 218px;
+            -moz-background-size: 100% 218px;
+        }
+        }
+        
+        
+/*----------------------1440------------------------*/ 
+        @media screen and (max-width: 1440px){
+            .section_header{
+            background-image: url('../images/top-1440.png');
+            background-repeat: no-repeat;
+            background-size: 100% 218px;
+            -moz-background-size: 100% 218px;
+        }
+        }
+        
+        
+/*----------------------1280------------------------*/ 
+        @media screen and (max-width: 1280px){
+            .section_header{
+            background-image: url('../images/top-1280.png');
+            background-repeat: no-repeat;
+            background-size: 100% 218px;
+            -moz-background-size: 100% 218px;
+        }
+        }
+        
+        
+/*----------------------1024------------------------*/ 
+        @media screen and (max-width: 1024px){
+            .section_header{
+            background-image: url('../images/top-1024.png');
+            background-repeat: no-repeat;
+            background-size: 100% 218px;
+            -moz-background-size: 100% 218px;
+        }
+            ul.header-top-nav li a{
+            padding: 8px;
+            font-size: 14px;
+        }
+        ul.header-top-autoriz li a{
+            margin: 2px 8px; 
+            font-size: 14px;
+        }
+            #row1024-1{
+            display: none;
+        }
+            #row1024-2{
+            display: flex;
+        }
+        }     
+       
+        
+/*----------------------870------------------------*/         
+        @media screen and (max-width: 870px){
+            ul.header-top-nav li a{
+            padding: 5px;
+            font-size: 13px;
+        }
+        ul.header-top-autoriz li a{
+            margin: 2px 5px; 
+            font-size: 13px;
+        }
+        }   
+        
+        
+        
+/*----------------------768------------------------*/      
+        @media screen and (max-width: 768px){
+            .section_header{
+            background-image: url('../images/top-768.png');
+            background-repeat: no-repeat;
+            background-size: 100% 218px;
+            -moz-background-size: 100% 218px;
+        }
+            ul.header-top-nav li a{
+            padding: 2px;
+            font-size: 12px;
+        }
+        ul.header-top-autoriz li a{
+            margin: 2px 2px; 
+            font-size: 12px;
+        }
+            ul.header-top-nav li:nth-child(7),
+            ul.header-top-nav li:nth-child(8){
+            flex: 1 10 auto;
+            display: none;
+        }
+            .header-col10{
+            flex: 9;
+        }
+            .header-col2{
+            flex: 3;
+        }
+        }
+        
+        
+        
+        
+        
+/*----------------------520------------------------*/      
+        @media screen and (max-width: 520px){
+            ul.header-top-nav li a{
+            padding: 2px;
+            font-size: 12px;
+        }
+        ul.header-top-autoriz li a{
+            margin: 2px 2px; 
+            font-size: 12px;
+        }
+            ul.header-top-nav li:nth-child(5),
+            ul.header-top-nav li:nth-child(6),
+            ul.header-top-nav li:nth-child(4){
+            flex: 1 10 auto;
+            display: none;
+        }
+            .header-col10{
+            flex: 11;
+        }
+            .header-col2{
+            flex: 5;
+        }
+        }
+        
+        
+        
+/*----------------------320------------------------*/ 
+        @media screen and (max-width: 320px){
+            .section_header{
+            background-image: url('../images/top-320.png');
+            background-repeat: no-repeat;
+            background-size: 100% 218px;
+            -moz-background-size: 100% 218px;
+        }
+        }
+    </style>
+    
+    
+
+<section class="section section_header">  
+
+
+
+       <div class="row row_header_topmenu">           
+            <div class="col col10 header-col10">
+                <ul class="header-top-nav">
+                    <li><a href="">О компании</a></li>
+                    <li><a href="">Технические каталоги</a></li>
+                    <li><a href="">Статьи</a></li>
+                    <li><a href="">Новости</a></li>
+                    <li><a href="">Видео</a></li>
+                    <li><a href="">Прайс-лист</a></li>
+                    <li><a href="">Оплата и доставка</a></li>
+                    <li><a href="">Контакты</a></li>                    
+                    <li></li>                    
+                </ul>
+                
+                
+            </div>   
+            <div class="col col2 header-col2">
+                <ul class="header-top-autoriz">
+                    <li><a href="">Вход</a></li>
+                    <li><a href="">Регистрация</a></li>
+                </ul>
+            </div>            
+       </div>
+       
+       
+       <div class="row" id="row1024-1">
+          
+           <div class="col col1 col-logo-left">
+               <div id="logo">
+                    <img src="images/GreenSnabLogo.png">
+               </div>
+           </div>
+           
+           <div class="col col11 col-logo-right">
+               <div class="row">
+                   <div class="col df-row">
+                       <img src="images/phone.png">
+                       <h4>+7 (495) 638-57-56</h4>
+                   </div>
+                   <div class="col df-row">
+                       <img src="images/map-marker-alt.png">
+                       <h4>г. Москва, ул. Дорожная, д. 60, стр. 4</h4>
+                   </div>
+                   <div class="col df-row">
+                       <img src="images/clock.png">
+                       <h4>Режим работы: Пн – Пт, с 9:00 до 18:00</h4>
+                   </div>
+                   <div class="col df-row">
+                       <img src="images/envelope.png">
+                       <h4>Отправить заявку</h4>
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col col8 df-row">
+                       <img src="images/block_view.png">
+                       <h4>Каталог продукции</h4>
+                   </div>
+                   <div class="col col5 df-row">
+                       <img src="images/calc.png">
+                       <h4>Подбор муфт</h4>
+                   </div>
+                   <div class="col col11">
+                       Поиск
+                   </div>
+                   <div class="col col10 df-row">
+                       <h4>Избранное</h4>
+                       <h4>Сравнить</h4>
+                   </div>
+               </div>
+           </div>
+           
+           <div class="col col1 col-logo-left">
+               <div id="logo">
+                    <img src="images/GreenSnabLogo.png">
+               </div>
+           </div>
+       </div>
+       
+       
+       
+       
+       <div class="row" id="row1024-2">                   
+           <div class="col">
+               <div class="row">
+                   <div class="col">
+                       <img id="logo2" src="images/GreenSnabLogo.png">
+                   </div>
+                   <div class="col col9">11</div>
+                   <div class="col col6">11</div>
+                   <div class="col col5">11</div>
+               </div>
+               <div class="row">
+                   <div class="col df-row">
+                       <img src="images/block_view.png">
+                       <h4>Каталог продукции</h4>
+                   </div>
+                   <div class="col">11</div>
+                   <div class="col">11</div>
+                   <div class="col">11</div>
+               </div>
+           </div>
+       </div>
+       
+</section>    
+      
+         
+            
+               
+   
+       
+<section class="section section1">       
+       
+       
+       <div class="row row_header_topmenu">
+            <div class="col col9">row-2 col-1 (col9) 9 рядов в колонке - текст текст текст</div>
+            <div class="col col3" style="background: #00d4ff">row-2 col-2 (col3) 3 ряда в колонке - текст текст текст текст текст текст текст текст текст текст текст текст</div>            
+       </div>
+       <div class="row row_header_topmenu">
+            <div class="col col4">row-3 col-1</div>
+            <div class="col col4">row-3 col-2</div>            
+            <div class="col col4">row-3 col-3</div>            
+       </div>
+       <div class="row row_header_topmenu">
+            <div class="col col1">row-3 col-1</div>
+            <div class="col col6">row-3 col-2</div>            
+            <div class="col col5">row-3 col-3</div>            
+       </div>
+       <div class="row row_header_topmenu">
+            <div class="col col1">row-4 col-1</div>
+            <div class="col col5">row-4 col-2</div>      
+            <div class="col col3">row-4 col-3</div>       
+            <div class="col col3">row-4 col-4</div>       
+       </div>
+       <div class="row row_header_topmenu">
+            <div class="col col1">row-5 col-1</div>
+            <div class="col col3">row-5 col-2</div>      
+            <div class="col col3">row-5 col-3</div>       
+            <div class="col col3">row-5 col-4</div>       
+            <div class="col col2">row-5 col-5</div>       
+       </div>
+       <div class="row row_header_topmenu">
+            <div class="col col1">row-6 col-1</div>
+            <div class="col col1">row-6 col-2</div>      
+            <div class="col col1">row-6 col-3</div>       
+            <div class="col col3">row-6 col-4</div>       
+            <div class="col col5">row-6 col-5</div>       
+            <div class="col col1">row-6 col-6 текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст </div>       
+       </div>
+
+</section>
+
+
+
+
+
+
+<section class="section section2">  
+       <h1>Section-2</h1>
+       <h3>Колонки одинаковой ширины</h3>
+       <div class="row row_header_topmenu">
+            <div class="col">row-1 col-1</div>
+       </div>
+       <div class="row row_header_topmenu">
+            <div class="col">row-2 col-1</div>
+            <div class="col">row-2 col-2</div>            
+       </div>
+       <div class="row row_header_topmenu">
+            <div class="col">row-3 col-1</div>
+            <div class="col">row-3 col-2</div>            
+            <div class="col">row-3 col-3</div>            
+       </div>
+       <div class="row row_header_topmenu">
+            <div class="col">row-4 col-1</div>
+            <div class="col">row-4 col-2</div>      
+            <div class="col">row-4 col-3</div>       
+            <div class="col">row-4 col-4</div>       
+       </div>
+       <div class="row row_header_topmenu">
+            <div class="col">row-5 col-1</div>
+            <div class="col">row-5 col-2</div>      
+            <div class="col">row-5 col-3</div>       
+            <div class="col">row-5 col-4</div>       
+            <div class="col">row-5 col-5</div>       
+       </div>
+       <div class="row row_header_topmenu">
+            <div class="col">row-6 col-1</div>
+            <div class="col">row-6 col-2</div>      
+            <div class="col">row-6 col-3</div>       
+            <div class="col">row-6 col-4</div>       
+            <div class="col">row-6 col-5</div>       
+            <div class="col">row-6 col-6 текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст </div>       
+       </div>
+
+</section>   
+
+
+
+<section class="section section3">  
+       <h1>Section-3</h1>
+       <h3>Колонки разной ширины</h3>
+       <div class="row row_header_topmenu">
+            <div class="col col12">row-1 col-1</div>
+       </div>
+       <div class="row row_header_topmenu">
+            <div class="col col8" style="background: #5e5">row-2 col-1 (col8) 8 рядов в колонке - текст текст текст</div>
+            <div class="col col4" style="background: #4293">row-2 col-2 (col4) 4 ряда в колонке - текст текст текст текст текст текст текст текст текст текст текст текст</div>            
+       </div>
+       <div class="row row_header_topmenu">
+            <div class="col col9" style="background: #b5e331">row-2 col-1 (col9) 9 рядов в колонке - текст текст текст</div>
+            <div class="col col3" style="background: #00d4ff">row-2 col-2 (col3) 3 ряда в колонке - текст текст текст текст текст текст текст текст текст текст текст текст</div>            
+       </div>
+       <div class="row row_header_topmenu">
+            <div class="col col4">row-3 col-1</div>
+            <div class="col col4">row-3 col-2</div>            
+            <div class="col col4">row-3 col-3</div>            
+       </div>
+       <div class="row row_header_topmenu">
+            <div class="col col1">row-3 col-1</div>
+            <div class="col col6">row-3 col-2</div>            
+            <div class="col col5">row-3 col-3</div>            
+       </div>
+       <div class="row row_header_topmenu">
+            <div class="col col1">row-4 col-1</div>
+            <div class="col col5">row-4 col-2</div>      
+            <div class="col col3">row-4 col-3</div>       
+            <div class="col col3">row-4 col-4</div>       
+       </div>
+       <div class="row row_header_topmenu">
+            <div class="col col1">row-5 col-1</div>
+            <div class="col col3">row-5 col-2</div>      
+            <div class="col col3">row-5 col-3</div>       
+            <div class="col col3">row-5 col-4</div>       
+            <div class="col col2">row-5 col-5</div>       
+       </div>
+       <div class="row row_header_topmenu">
+            <div class="col col1">row-6 col-1</div>
+            <div class="col col1">row-6 col-2</div>      
+            <div class="col col1">row-6 col-3</div>       
+            <div class="col col3">row-6 col-4</div>       
+            <div class="col col5">row-6 col-5</div>       
+            <div class="col col1">row-6 col-6 текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст </div>       
+       </div>
+
+</section>
+
+
+
+
+
+    
+   
+    
+<script src="js/main.js" defer></script>        
+</body>
+
+</html>
